@@ -16,7 +16,7 @@ struct Article {
 }
 
 // * Convert the Article struct to a JSON string
-fn convert_to_json(article: Article) -> Result<String, serde_json::Error> {
+fn convert_to_json(article: &Article) -> Result<String, serde_json::Error> {
     return serde_json::to_string(&article);
 }
 
@@ -57,12 +57,16 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     };
 
     // * Serialize the article struct to a JSON string
-    let json = convert_to_json(article)?;
+    let json = convert_to_json(&article)?;
 
     let output_file = "output.json";
 
     // * Write the JSON string to a file
-    write(output_file, json.as_bytes())?;
+    // * Write the JSON string to a file with pretty formatting
+    write(
+        output_file,
+        serde_json::to_string_pretty(&article)?.as_bytes(),
+    )?;
 
     println!("{}", json);
 

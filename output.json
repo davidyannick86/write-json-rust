@@ -2,14 +2,32 @@
   "title": "The Conduct of Life",
   "author": "Ralph Waldo Emmerson",
   "content": [
-    { "name": "Fate" },
-    { "name": "Power" },
-    { "name": "Wealth" },
-    { "name": "Culture" },
-    { "name": "Behavior" },
-    { "name": "Worship" },
-    { "name": "Considerations by the Way" },
-    { "name": "Beauty" },
-    { "name": "Illusions" }
+    {
+      "name": "Fate"
+    },
+    {
+      "name": "Power"
+    },
+    {
+      "name": "Wealth"
+    },
+    {
+      "name": "Culture"
+    },
+    {
+      "name": "Behavior"
+    },
+    {
+      "name": "Worship"
+    },
+    {
+      "name": "Considerations by the Way"
+    },
+    {
+      "name": "Beauty"
+    },
+    {
+      "name": "Illusions"
+    }
   ]
 }
