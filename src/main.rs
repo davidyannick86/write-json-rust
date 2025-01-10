@@ -1,3 +1,4 @@
+use log::info;
 use serde::{Deserialize, Serialize};
 use std::fs::write;
 
@@ -21,6 +22,9 @@ fn convert_to_json(article: &Article) -> Result<String, serde_json::Error> {
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
+    // Initialize the logger
+    env_logger::init();
+
     // * Create an instance of the Article struct
     let article = Article {
         title: "The Conduct of Life".to_string(),
@@ -61,14 +65,15 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let output_file = "output.json";
 
-    // * Write the JSON string to a file
     // * Write the JSON string to a file with pretty formatting
     write(
         output_file,
         serde_json::to_string_pretty(&article)?.as_bytes(),
     )?;
 
-    println!("{}", json);
+    // * log the json string in the console
+    // ! to view the log, run the program with the RUST_LOG=info environment variable
+    info!("JSON string: {}", json);
 
     return Ok(());
 }
