@@ -72,7 +72,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     )?;
 
     // * log the json string in the console
-    // ! to view the log, run the program with the RUST_LOG=info environment variable
+    // ! to view the log, run the program with the RUST_LOG=info environment variable : RUST_LOG=info cargo run
     info!("JSON string: {}", json);
 
     return Ok(());
