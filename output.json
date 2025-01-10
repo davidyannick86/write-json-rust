@@ -5,6 +5,11 @@
     { "name": "Fate" },
     { "name": "Power" },
     { "name": "Wealth" },
-    { "name": "Culture" }
+    { "name": "Culture" },
+    { "name": "Behavior" },
+    { "name": "Worship" },
+    { "name": "Considerations by the Way" },
+    { "name": "Beauty" },
+    { "name": "Illusions" }
   ]
 }

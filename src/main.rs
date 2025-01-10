@@ -3,7 +3,7 @@ use std::fs::write;
 
 // * Implement the Serialize and Deserialize traits for the Paragraph struct
 #[derive(Serialize, Deserialize)]
-struct Paragraph {
+struct Chapter {
     name: String,
 }
 
@@ -12,7 +12,7 @@ struct Paragraph {
 struct Article {
     title: String,
     author: String,
-    content: Vec<Paragraph>,
+    content: Vec<Chapter>,
 }
 
 // * Convert the Article struct to a JSON string
@@ -26,17 +26,32 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         title: "The Conduct of Life".to_string(),
         author: "Ralph Waldo Emmerson".to_string(),
         content: vec![
-            Paragraph {
+            Chapter {
                 name: "Fate".to_string(),
             },
-            Paragraph {
+            Chapter {
                 name: "Power".to_string(),
             },
-            Paragraph {
+            Chapter {
                 name: "Wealth".to_string(),
             },
-            Paragraph {
+            Chapter {
                 name: "Culture".to_string(),
+            },
+            Chapter {
+                name: "Behavior".to_string(),
+            },
+            Chapter {
+                name: "Worship".to_string(),
+            },
+            Chapter {
+                name: "Considerations by the Way".to_string(),
+            },
+            Chapter {
+                name: "Beauty".to_string(),
+            },
+            Chapter {
+                name: "Illusions".to_string(),
             },
         ],
     };
