@@ -17,7 +17,7 @@ struct Article {
 
 // * Convert the Article struct to a JSON string
 fn convert_to_json(article: Article) -> Result<String, serde_json::Error> {
-    serde_json::to_string(&article)
+    return serde_json::to_string(&article);
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -66,5 +66,5 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     println!("{}", json);
 
-    Ok(())
+    return Ok(());
 }
